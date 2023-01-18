@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+ 
+  <div class="box">
+    <div class="container">
+        <div class="Hour">
+          <label for="Hour"><input type="number"id="hour"max="99"min="0"class="time"></label> 
+            <p id="P1" class="semicolon">:</p>
+          
+            
+        </div>
+        
+        <div class="Min">
+          <label for="minute"><input type="number"id="minute"max="60"min="0"class="time"></label>
+          <p id="P1" class="semicolon">:</p>
+          <!-- <button id="reset"onclick="StopTimer()" class="btn">Reset</button> -->
+          
+           
+        </div>
+        <div class="Sec">
+          <label for="seconds"><input type="number"id="seconds"max="60"min="0"class="time"></label> 
+          
+        </div>
+    </div>
+    <div class="div">
+      <button id="start"onclick="StartInterval()" class="btn">Start</button>
+      <button id="reset" class="btn">Reset</button>
+    </div>
+  </div>
+<script src="/main.js"></script>
+  <!-- <script >
+    var start=document.getElementById("start");
+var reset=document.getElementById("reset");
+
+var h=document.getElementById("hour");
+var m=document.getElementById("minute");
+var s=document.getElementById("seconds");
+ 
+var StartTimer=null;
+function Timer(){
+    if(h.value==0 && m.value==0 &&s.value){
+        h.value=0;
+        m.value=0;
+        s.value=0;
+    }
+    else if(s.value !=0){
+        s.value--;
+    }
+    else if(m.value!=0 && s.value==0){
+        s.value=59;
+        m.value--;
+    }
+    else if(h.value!=0 && m.value==0){
+        m.value=59;
+        h.value--;
+    }
+    return;
+}
+function StopTimer(){
+    clearInterval(StartTimer); 
+}
+
+start.addEventlistener("click",function(){
+    function StartInterval(){
+        function StartTimer(){
+            StartTimer=setInterval(function(){
+                timer();
+            },1000);
+        
+            }
+        } 
+    })
+reset.addEventlistener('click',function(){
+    h.value=0;
+    m.value=0;
+    s.value=0;
+    stopTimer()
+})
+  </script> -->
+</body>
+</html>
